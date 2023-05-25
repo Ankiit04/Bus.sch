@@ -158,7 +158,7 @@ class _TrackingPageState extends State<TrackingPage> {
               return AlertDialog(
                 title: Text('Bus Reached'),
                 content: Text(
-                  'The bus is about to reach the designated stoppage. Please be prepared to disembark.',
+                  'The bus is about to reach the designated stoppage. Please be prepared to board.',
                 ),
                 actions: <Widget>[
                   TextButton(
@@ -293,16 +293,16 @@ class ActivityPage extends StatelessWidget {
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 16.0),
-            Text('Scanned Card: 9:00 AM'),
-            Text('Scanned classroom: 9:45 AM'),
+            Text('Scanned card on bus : 9:00 AM'),
+            Text('Scanned card in the classroom: 9:45 AM'),
             SizedBox(height: 32.0),
             Text(
               'Today Activity',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 16.0),
-            Text('Scanned Bus: 8:30 AM'),
-            Text('Waiting to scan classroom'),
+            Text('Scanned card on Bus: 8:30 AM'),
+            Text('Waiting to scan card in classroom'),
           ],
         ),
       ),
