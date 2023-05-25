@@ -201,6 +201,16 @@ class _TrackingPageState extends State<TrackingPage> {
               'Longitude: $longitude',
               style: TextStyle(fontSize: 16.0),
             ),
+            SizedBox(height: 16.0),
+            ElevatedButton(
+              child: Text('Track Activity'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ActivityPage()),
+                );
+              },
+            ),
           ],
         ),
       ),
@@ -255,6 +265,39 @@ class AttendancePage extends StatelessWidget {
                 onPrimary: Colors.white,
               ),
             ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class ActivityPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Activity'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              'Yesterday Activity',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 16.0),
+            Text('Scanned Card: 9:00 AM'),
+            Text('Scanned Bus: 9:15 AM'),
+            SizedBox(height: 32.0),
+            Text(
+              'Today Activity',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 16.0),
+            Text('Scanned Bus: 8:30 AM'),
+            Text('Waiting to scan classroom'),
           ],
         ),
       ),
