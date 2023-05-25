@@ -66,6 +66,12 @@ class LoginPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              Image.asset(
+                'assets/bus.png',
+                width: 120,
+                height: 120,
+              ),
+              SizedBox(height: 16.0),
               Text(
                 'Login',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
@@ -98,8 +104,7 @@ class LoginPage extends StatelessWidget {
               ),
               SizedBox(height: 16.0),
               ElevatedButton.icon(
-                icon: Image.asset('assets/google_logo.png',
-                    width: 20, height: 20),
+                icon: Image.asset('assets/google.png', width: 20, height: 20),
                 label: Text('Sign in with Google'),
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
@@ -144,7 +149,7 @@ class _TrackingPageState extends State<TrackingPage> {
         latitude += 0.1;
         longitude += 0.1;
 
-        if (!isBusReached && latitude >= 2.0 && longitude >= 4.0) {
+        if (!isBusReached && latitude >= 2.0 && longitude >= 2.0) {
           isBusReached = true;
 
           showDialog(
@@ -289,7 +294,7 @@ class ActivityPage extends StatelessWidget {
             ),
             SizedBox(height: 16.0),
             Text('Scanned Card: 9:00 AM'),
-            Text('Scanned Bus: 9:15 AM'),
+            Text('Scanned classroom: 9:45 AM'),
             SizedBox(height: 32.0),
             Text(
               'Today Activity',
